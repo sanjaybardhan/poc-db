@@ -573,3 +573,7 @@ result_df.write \
     .mode("overwrite") \
     .saveAsTable("workspace.default.curated_TotalOrderQuantity")
 
+
+# COMMAND ----------
+
+#
