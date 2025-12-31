@@ -19,7 +19,7 @@ result_df = (
         F.col("c.Lastname")
     )
     .agg(
-        F.sum(F.col("o.OrderQuantity")).alias("TotalOrderQuantity")
+        F.sum(F.col("o.OrderQuantity")).alias("Order_per_Customer")
     )
     .filter(F.col("TotalOrderQuantity") > 1)  # HAVING clause
 )
@@ -29,7 +29,7 @@ result_df.display()
 result_df.write \
     .format("delta") \
     .mode("overwrite") \
-    .saveAsTable("workspace.default.curated_TotalOrderQuantity")
+    .saveAsTable("workspace.default.curated_Order_per_Customer")
 
 # COMMAND ----------
 
