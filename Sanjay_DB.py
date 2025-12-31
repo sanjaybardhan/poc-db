@@ -8,7 +8,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Product_Category"
 df.write.format("delta") \
     .mode("overwrite") \
@@ -28,7 +28,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Product_Subcategory"
 df.write.format("delta") \
     .mode("overwrite") \
@@ -48,7 +48,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Territory"
 df.write.format("delta") \
     .mode("overwrite") \
@@ -67,7 +67,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Product_2020"
 df.write.format("delta") \
     .mode("overwrite") \
@@ -86,7 +86,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Customer_2020"
 df.write.format("delta") \
     .mode("overwrite") \
@@ -106,7 +106,7 @@ df = spark.read.format("csv") \
 
 display(df)
 
-# Write to a Table, mode: append(Add new rows), error, ignore
+# Write to a Table, mode: change to Append for incremental loads
 table_name = "Orders_2020"
 df.write.format("delta") \
     .mode("overwrite") \
