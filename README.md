@@ -1,4 +1,4 @@
-Sanjay.DB: This script is to ingest data from load data from /Volumes/workspace/sanjay_db_schema/sanjay_db_volume/ to respective tables
+Sanjay.DB: This script is to ingest data from volume, "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/ to respective tables"
 
 Transformation1_Cust_Order: Customers who have ordered more than one item
 
