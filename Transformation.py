@@ -1,4 +1,4 @@
-# 1. Insights: Customers who have ordered more than one item
+# Customers who have ordered more than one item
 from pyspark.sql import functions as F
 
 # Load tables
@@ -19,9 +19,9 @@ result_df = (
         F.col("c.Lastname")
     )
     .agg(
-        F.sum(F.col("o.OrderQuantity")).alias("Order_per_Customer")
+        F.sum(F.col("o.OrderQuantity")).alias("TotalOrderQuantity")
     )
-    .filter(F.col("TotalOrderQuantity") > 1)  # HAVING clause
+    .filter(F.col("TotalOrderQuantity") > 1)  
 )
 
 result_df.display()
@@ -29,11 +29,10 @@ result_df.display()
 result_df.write \
     .format("delta") \
     .mode("overwrite") \
-    .saveAsTable("workspace.default.curated_Order_per_Customer")
+    .saveAsTable("workspace.default.curated_TotalOrderQuantity")
 
-# COMMAND ----------
 
-# 2.Insigntes: Number of products ordered per territory where the country is not equal to Australia. If the continent is equal to North America, then display Americas  Concatinate region + country (Area).   
+# Number of products ordered per territory where the country is not equal to Australia.   If the continent is equal to North America, then display Americas. Concatinate region + country (Area). 
 
 from pyspark.sql import functions as F
 
@@ -86,5 +85,3 @@ result_df.write \
     .format("delta") \
     .mode("overwrite") \
     .saveAsTable("workspace.default.curated_sales_by_territory")
-
-
