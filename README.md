@@ -1,12 +1,9 @@
 # Project: Data Engineering Exercise
 
-Goal
+Goal:
 Build a small end-to-end data pipeline that ingests raw datasets from a source system, transforms them into a simple analytical tabular data model, and produces basic insights for analytics and reporting.
 
-Source Data
-The following source files are uploaded to the Databricks Volume:
-/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/
-
+Source Data: The following source files are uploaded to the Databricks Volume "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/"
 Source Files:
 - customer_2020.csv
 - orders_2020.csv
@@ -32,11 +29,11 @@ This script ingests CSV files from the Databricks Volume into raw tables:
 - orders_2020
 - territory
 
-Step 2: Transformation – Customer Orders
+Step 2: Transformation1 - Customers who have ordered more than one item
 Script Name: Transformation1_Cust_Order
 Joins customer and order data to create a Silver layer table.
-Insight:
-Customers who have ordered more than one item
+Insight: Customers who have ordered more than one item
+Table: workspace.transformation_layer.curated_totalorderquantity
 
 Step 3: Transformation – Products per Territory
 Script Name: Transformation2_Prod_per_Territory
@@ -44,6 +41,6 @@ Transforms order and territory data.
 Logic:
 - Exclude Australia
 - Rename North America to Americas
-Insight:
-Number of products ordered per territory
+Insight:Number of products ordered per teritory
+Table: workspace.transformation_layer.curated_sales_by_territory
 
