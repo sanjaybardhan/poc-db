@@ -1,5 +1,5 @@
 # Databricks notebook source
-# Define Source path
+# Ingestion of Territory_csv
 Territory_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/Databricks_Project/Databricks_Project/Territory.csv"
 
 # Read file from source path, automatically determine column data types
@@ -18,7 +18,7 @@ print(f"Table '{table_name}' created successfully!")
 
 # COMMAND ----------
 
-# Define Source path
+# Ingestion of Customer_2020_csv
 Customer_2020_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/Databricks_Project/Databricks_Project/Customer_2020.csv"
 
 # Read file from source path, automatically determine column data types
@@ -38,7 +38,7 @@ print(f"Table '{table_name}' created successfully!")
 
 # COMMAND ----------
 
-# Define Source path
+# Ingestion of Orders_2020_csv
 Orders_2020_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/Databricks_Project/Databricks_Project/Orders_2020.csv"
 
 # Read file from source path, automatically determine column data types
