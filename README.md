@@ -42,5 +42,6 @@ Logic:
 - Exclude Australia
 - Rename North America to Americas
 Insight:Number of products ordered per teritory
-Table: workspace.transformation_layer.curated_sales_by_territory
+Table: workspace.transformation_layer.curated_sales_by_territory'
+
 
