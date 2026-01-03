@@ -1,6 +1,6 @@
 # Project: Data Engineering Exercise
 
-Goal:
+#Goal:
 Build a small end-to-end data pipeline that ingests raw datasets from a source system, transforms them into a simple analytical tabular data model, and produces basic insights for analytics and reporting.
 
 Source Data: The following source files are uploaded to the Databricks Volume "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/"
