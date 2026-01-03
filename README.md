@@ -33,7 +33,7 @@ Step 2: Transformation1 - Customers who have ordered more than one item
 Script Name: Transformation1_Cust_Order
 - Joins customer and order data to create a Silver layer table.
 - Insight: Customers who have ordered more than one item
-- Target Table: workspace.transformation_layer.curated_totalorderquantity
+- Target Table: workspace.transformation_layer.curated_tota_order_quantity
 
 Step 3: Transformation – Products per Territory
 Script Name: Transformation2_Prod_per_Territory
