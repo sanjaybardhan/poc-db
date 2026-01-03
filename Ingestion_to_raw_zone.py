@@ -6,7 +6,6 @@ Territory_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_volume/
 df = spark.read.format("csv") \
     .option("header", "true").option("inferSchema", "true").load(Territory_csv_file_path)
 
-display(df)
 
 # Write to a Table, mode: change to Append for incremental loads
 table_name = "Territory"
@@ -14,7 +13,7 @@ df.write.format("delta") \
     .mode("overwrite") \
     .option("overwriteSchema", "true") \
     .saveAsTable("workspace.raw_zone.Territory")
-print(f"Table '{table_name}' created successfully!")
+# print(f"Table '{table_name}' created successfully!")
 
 # COMMAND ----------
 
@@ -25,7 +24,6 @@ Customer_2020_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_vol
 df = spark.read.format("csv") \
     .option("header", "true").option("inferSchema", "true").load(Customer_2020_csv_file_path)
 
-display(df)
 
 # Write to a Table, mode: change to Append for incremental loads
 table_name = "Customer_2020"
@@ -34,7 +32,7 @@ df.write.format("delta") \
     .option("overwriteSchema", "true") \
     .saveAsTable("workspace.raw_zone.Customer_2020")
 
-print(f"Table '{table_name}' created successfully!")
+# print(f"Table '{table_name}' created successfully!")
 
 # COMMAND ----------
 
@@ -45,7 +43,6 @@ Orders_2020_csv_file_path = "/Volumes/workspace/sanjay_db_schema/sanjay_db_volum
 df = spark.read.format("csv") \
     .option("header", "true").option("inferSchema", "true").load(Orders_2020_csv_file_path)
 
-display(df)
 
 # Write to a Table, mode: change to Append for incremental loads
 table_name = "Orders_2020"
@@ -54,4 +51,4 @@ df.write.format("delta") \
     .option("overwriteSchema", "true") \
     .saveAsTable("workspace.raw_zone.Orders_2020")
 
-print(f"Table '{table_name}' created successfully!")
+# print(f"Table '{table_name}' created successfully!")
