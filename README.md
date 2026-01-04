@@ -45,7 +45,10 @@ Logic:
 - Target Table: workspace.transformation_layer.curated_sales_by_territory
 
 
-
+# Do next with more time.
+- We can scheule the ingestion jobs
+- Create three layers (Bronze, Silver and Gold)
+- In silver layer add meta data columns (ingestion date, Source name and implement CDC)
 
 
 
